@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<br>
+<br>
+
+	<div id="myDiv"
+		style="background-image: url('resources/images/wr.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+		<div class="container" ng-controller="BlogController as ctrl">
+
+			<!-- <div ng-repeat="blog in ctrl.blogs | filter: sear_test">-->
+			<h3>Welcome to Blogs</h3> <br>
+			<br>
+			<div ng-repeat="blog in ctrl.blogs">
+				<a href="#" ng-click="ctrl.getSelectedBlog(blog.id)"><h4>Title :
+					{{blog.title}} - Written By : {{blog.userID}}</h4></a> <br>
+				<br>
+			</div>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+</body>
+</html>
