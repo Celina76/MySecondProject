@@ -1,0 +1,29 @@
+<br />
+<br />
+<br />
+
+<div class="container" ng-controller="EventController as ctrl">
+<div id="myDiv"
+	style=" background-image: url('resources/images/e1.gif');  background-repeat: no-repeat; background-size: cover; background-position: center center;">
+	<label>Welcome to events</label><br />
+	<br />
+	<div ng-repeat="event in ctrl.events"><h3>
+		Title: <a href="#/view_event"
+			ng-click="ctrl.getSelectedEvent(event.event_id)">{{event.event_title}}</a></h3>
+	</div>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</div>
+</div>

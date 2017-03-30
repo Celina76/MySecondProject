@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<br>
+	<br>
+	<div id="myDiv"
+		style="background-image: url('resources/images/fro.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+		<div class="container">
+			<div ng-show="currentUser==''">
+				<div class="alert alert-danger fade in">
+					You are not logged in.. Please login<a href="#/login">here</a>
+					Create a blog
+				</div>
+
+				<div>
+					If you are not at register , you can register <a href="#/register">here</a>
+				</div>
+			</div>
+		</div>
+
+		<div ng-hide="currentUser==''">
+
+			<div class="generic-container" ng-controller="ForumController as ctrl">
+
+				<form ng-submit="ctrl.submit()" name="myForm"
+					class="form-horizontal">
+
+					<label>Please fill the Forum details...</label>
+
+
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="topic">Topic</label>
+							<div class="col-md-7">
+								<input type="text" ng-model="ctrl.forum.topic" id="topic"
+									class="topic form-control input-sm"
+									placeholder="Enter topic" required ng-minlength="10"
+									ng-maxlength="500">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="col-md-2 control-lable" for="content">Content</label>
+							<div class="col-md-7">
+								<textarea rows="10" cols="100" ng-model="ctrl.forum.content"
+									id="content" class="content form-control input-sm"
+									placeholder="Forum content" required ng-minlength="5"
+									ng-maxlength="500">
+                            </textarea>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-actions floatRight">
+							<input type="submit" value="Create Forum"
+								class="btn btn-primary btn-sm">
+							<button type="button" ng-click="ctrl.reset()"
+								class="btn btn-warning btn-sm">Reset Blog</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+		</div>
+		<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br/>
+	</div>
+</body>
+</html>
